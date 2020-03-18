@@ -1,0 +1,19 @@
+<p>cart-details works!</p>
+<table align = "center" border="1">
+    <caption><h1>Product Details</h1></caption>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Product Price</th>
+            <th>Product Category</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let product of cartProducts">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td><img [src]="product.imgPath" height="100" width="100" alt="galat raasta"/></td>
+            <td>{{product.price}}</td>
+            <td>{{product.category}}</td>
+            <td><button (click)="deleteFromCart(product)" >Delete</button></td>
+        </tr>
