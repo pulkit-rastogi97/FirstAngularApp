@@ -7,7 +7,7 @@
     </div>
     <ul class="nav navbar-nav">
     <li *ngFor="let item of menuItems">
-    <a href="#">{{item}}</a>
+    <a routerLink="{{item | lowercase}}">{{item}}</a>
     </li>
     </ul>
     </nav>

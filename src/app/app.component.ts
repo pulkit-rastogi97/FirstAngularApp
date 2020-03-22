@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FirstAngularApp';
+  name = "Riya";
+
+  updateEventListener(args : any)
+  {
+    this.name=args;
+  }
+  
 }

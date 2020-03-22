@@ -7,12 +7,11 @@ export class MenuService{
 
     constructor()
     {
-        this.menuItems= ["Login","Products","Cart","Sign Up"];
+        this.menuItems= ["Product","Cart", "Profile"];
     }
     getMenuItems() : string[]
     {
         return this.menuItems;
     }
-
 
 }
