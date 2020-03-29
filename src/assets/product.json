@@ -1,0 +1,7 @@
+[
+{"id":1, "name" : "One Plus 5", "imgPath": "./assets/images/1.jpg", "price" : 37999, "category":"Mobile"},
+{"id":2, "name" : "Moto G5 Plus", "imgPath": "./assets/images/2.jpg", "price" : 13999, "category":"Mobile"},
+{"id":3, "name" : "Nokia 6", "imgPath": "./assets/images/3.jpg", "price" : 14999, "category":"Mobile"},
+{"id":4, "name" : "Samsung Galaxy Note 8", "imgPath": "./assets/images/4.jpg", "price" : 67999, "category":"Mobile"},
+{"id":5, "name" : "Apple Iphone 8", "imgPath": "./assets/images/5.jpg", "price" : 64000, "category":"Mobile"}
+]

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<div align="center"> <h1>Reactive Form</h1><br></div>
+
+<form align ="center" [formGroup]="contactForm"
+(ngSubmit)="onSubmit(contactForm.value)" >
+    <div formGroupName="personalData" >
+        <br>Email <input formControlName="email" required />
+        <br>Mobile <input formControlName="mobile" />
+        <br>Country <select formControlName = "country">
+            <br><option *ngFor="let country of countries" [value]="country">
+                {{country}}
+            </option>
+        </select><br>
+    </div>
+    request types
+    <br><select formControlName="requestType" >
+        <br><option *ngFor="let requestType of requestTypes" [value]="requestType">
+            {{requestType}}
+        </option>
+    </select>
+    <br>
+
+    <br><button type="submit" [disabled]="contactForm.pristine">Save</button>
+    <!-- <br><button type="reset" (click)="revert()" [disabled]="contactForm.pristine"></button> -->
+
+</form>

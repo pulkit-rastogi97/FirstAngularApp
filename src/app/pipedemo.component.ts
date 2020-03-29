@@ -15,6 +15,9 @@ import { Component, Pipe } from '@angular/core';
     {{today| date : 'format'}}<br>
 
 
+    Address:-
+    {{address | reversestr}}
+
     `,
 })
 

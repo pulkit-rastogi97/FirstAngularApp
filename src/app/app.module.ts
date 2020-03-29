@@ -11,9 +11,17 @@ import { MenuService } from './menu/menu.service';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
 import { CartService } from './cart-details/cart.service';
 import { ProfileComponent } from './profil.component';
-import {FormsModule} from '@angular/forms';
-import {RouterModule, Routes} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { PipeDemoComponent } from './pipedemo.component';
+import { ReverseStrPipe } from './pipedemo_reversestr.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductJSComponent } from './productjson.component';
+import { SignUpFormComponent } from './signupform.component';
+import { LoginComponent } from './login.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormComponent } from './reactiveform.component';
+
 
 var routes : Routes = [
   {
@@ -36,6 +44,22 @@ var routes : Routes = [
   {
     path : 'profile',
     component : ProfileComponent,
+  },
+  {
+    path : 'signup',
+    component : SignUpFormComponent,
+  },
+  {
+    path : 'login',
+    component : LoginComponent,
+  },
+  {
+    path : 'contact',
+    component : ContactComponent,
+  },
+  {
+    path : 'reactiveform',
+    component : ReactiveFormComponent,
   }
 ]
 @NgModule({
@@ -48,17 +72,25 @@ var routes : Routes = [
     CartDetailsComponent,
     ProfileComponent,
     PipeDemoComponent,
+    ReverseStrPipe,
+    ProductJSComponent,
+    SignUpFormComponent,
+    LoginComponent,
+    ContactComponent,
+    // ReactiveFormsModule,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [MenuService,CartService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-
+export class AppModule 
+{ 
 
 }

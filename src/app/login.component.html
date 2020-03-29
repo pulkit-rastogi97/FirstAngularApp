@@ -1,0 +1,27 @@
+<form #loginForm="ngForm" novalidate 
+(ngSubmit)="onSubmit(loginForm.value)">
+
+<pre>{{loginForm.value | json }}</pre>
+
+<div class="container">
+    <div class="form-group">
+        <label for="input1">Enter Username :: </label>
+        <input type="text" class="form-control" id="input1"
+            #uname="ngModel" [(ngModel)]="user.username" name="name" required minlength="3" maxlength="10">
+
+        <p *ngIf="uname.errors?.required">Username is mandatory!</p>
+        <p *ngIf="uname.errors?.minlength">Minimum length should be 3</p>
+    </div>
+    <div class="form-group">
+        <label for="input2">Enter Password :: </label>
+        <input type="text" class="form-control" id="input1"
+            #password="ngModel" [(ngModel)]="user.password" name="password" required>
+
+        <p *ngIf="password.errors?.required">Password is mandatory!</p>
+    </div>
+
+</div>
+
+<button [disabled]="loginForm.invalid"
+class ="btn btn-primary">Submit</button>
+</form>

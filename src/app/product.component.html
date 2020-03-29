@@ -15,7 +15,7 @@
         
         <tr *ngFor="let product of products">
             <td>{{product.id}}</td>
-            <td><a [routerLink]="['product','product.id']">{{product.name}}</a></td>
+            <td><a [routerLink]="['product',product.id]">{{product.name}}</a></td>
             <td><img [src]="product.imgPath" height="100" width="100" alt="galat raasta"/></td>
             <td>{{product.price}}</td>
             <td>{{product.category}}</td>
@@ -24,20 +24,17 @@
         
         </tr>
 
-
-
-
     </table>
-    <!-- <h3>Hiii</h3>
-    start
+    
+    <h3>Product Details for ProductId {{productId}} </h3>
     <div *ngFor="let product of products">
         <div *ngIf = "product.id === productId ">
-        <span>{{product.name}}</span>
-        <span>{{product.price}}</span>
-        <span>{{product.category}}</span>
-        <img [src] = "product.imgPath" height=100 width=100 />
+            <span>{{product.name}}</span><br>
+            <span>{{product.price}}</span><br>
+            <span>{{product.category}}</span><br>
+            <img [src] = "product.imgPath" height=100 width=100 />
     </div>
-</div> -->
+</div> 
 <div><router-outlet></router-outlet></div>
 
 
